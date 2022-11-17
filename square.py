@@ -5,9 +5,10 @@
 from intersect import *
 
 
-class Plane(object):
-    def __init__(self, y, material):
+class Square(object):
+    def __init__(self, y, x, material):
         self.y = y
+        self.x = x
         self.material = material
 
     def ray_intersect(self, origin, direction):

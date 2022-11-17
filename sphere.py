@@ -1,4 +1,9 @@
+# Angel Higueros
+# 20460
+# RT2
+
 from intersect import *
+
 
 class Sphere(object):
     def __init__(self, center, radius, material):
@@ -9,7 +14,7 @@ class Sphere(object):
     def ray_intersect(self, origin, direction):
         L = self.center - origin
         tca = L @ direction
-        l = L.length() 
+        l = L.length()
         d2 = l ** 2 - tca ** 2
 
         if d2 > self.radius ** 2:
@@ -29,8 +34,8 @@ class Sphere(object):
         impact = origin + direction * t0
         normal = (impact - self.center).norm()
 
-        return Intersect(
-            distance = t0,
-            point = impact, 
-            normal = normal
+        return intersect(
+            distance=t0,
+            point=impact,
+            normal=normal
         )

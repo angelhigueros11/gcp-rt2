@@ -1,6 +1,9 @@
+# Angel Higueros
+# 20460
+# RT2
 
-class Material:
-    def __init__(self, diffuse, albedo=(1, 0, 0), spec=0):
+class Material(object):
+    def __init__(self, diffuse, albedo, spec):
         self.diffuse = diffuse
         self.albedo = albedo
         self.spec = spec
